@@ -14,11 +14,15 @@ import {MatInputModule} from '@angular/material/input';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    FeedbackComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,6 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     MatIconModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [FeedbackComponent]
 })
 export class AppModule { }
