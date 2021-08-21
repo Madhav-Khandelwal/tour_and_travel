@@ -35,4 +35,11 @@
   .registration-tab{
     margin-bottom: 20%;
   }
-  
+  .login-page {
+    background-image: url("../../assets/g-1.jpg"); 
+    background-color: #cccccc; 
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+  }

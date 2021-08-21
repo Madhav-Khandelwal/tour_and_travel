@@ -16,8 +16,7 @@ export class RegisterUserComponent{
     this._userService.register(this.userModel)
     .subscribe(
       data=> console.log("success ",data),
-      error=> console.log("fail",error)
-
+      error=> console.log("message",error)
     )
   }
 
