@@ -1,0 +1,8 @@
+.login-page {
+    background-image: url("../../assets/p-2.jpg"); 
+    background-color: #cccccc; 
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+  }

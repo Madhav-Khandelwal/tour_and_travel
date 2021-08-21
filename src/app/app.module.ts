@@ -14,11 +14,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { UserpageComponent } from './userpage/userpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    HomeComponent,
+    UserpageComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,9 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
