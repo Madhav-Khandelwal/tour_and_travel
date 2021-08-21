@@ -16,13 +16,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ContactComponent } from './contact/contact.component';
+import { TransportComponent } from './transport/transport.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterUserComponent,
     FeedbackComponent,
-    ContactComponent
+    ContactComponent,
+    TransportComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,6 @@ import { ContactComponent } from './contact/contact.component';
     MatIconModule
   ],
   providers: [],
-  bootstrap: [FeedbackComponent]
+  bootstrap: [TransportComponent]
 })
 export class AppModule { }

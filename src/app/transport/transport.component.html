@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="card shadow mb-5 bg-white rounded">
+    
+    <div class="card-body">
+        
+        <p class="card-title text-center shadow mb-5 rounded">Travel Anywhere</p>
+        <div class="icons text-center">
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-taxi fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-train fa-2x" aria-hidden="true"></i> </div>
+        <hr>
+        
+        <div class="row mb-3 mt-3"> <label class="radiobtn"><input type="radio" name="gender" value="male">One Way</label> <label class="radiobtn"><input type="radio" name="gender" value="male">Round Trip</label> </div>
+        
+        <div class="row">
+            <div class="col-sm-6"> <select class="browser-default custom-select mb-4" id="select">
+                    <option value="" disabled="" selected="">From City</option>
+                    <option value="1">New Delhi</option>
+                    <option value="2">Mumbai</option>
+                    <option value="3">Bangalore</option>
+                    <option value="4">Hyderabad</option>
+                </select> </div>
+            <div class="col-sm-6"> <select class="browser-default custom-select mb-4" id="select">
+                    <option value="" disabled="" selected="">To City</option>
+                    <option value="1">New Delhi</option>
+                    <option value="2">Mumbai</option>
+                    <option value="3">Bangalore</option>
+                    <option value="4">Hyderabad</option>
+                </select> </div>
+        </div>
+        <!--Third Row-->
+        <div class="row">
+            <div class="col-sm-6"> <input placeholder="&#xf073; Departing" type="text" id="date-picker-example" class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome"> </div>
+            <div class="col-sm-6"> <input placeholder="&#xf073; Arriving" type="text" id="date-picker-example" class="form-control datepicker" style="font-family:Arial, FontAwesome"> </div>
+        </div>
+        <!--Fourth Row-->
+        <div class="row mt-4">
+            <div class="col-sm-6"> <select class="browser-default custom-select mb-4" id="select">
+                    <option value="" disabled="" selected="">Start Time</option>
+                    <option value="1">6:00 AM</option>
+                    <option value="2">7:00 AM</option>
+                    <option value="3">8:00 AM</option>
+                    <option value="4">9:00 AM</option>
+                    <option value="5">10:00 AM</option>
+                    <option value="6">11:00 AM</option>
+                    <option value="7">12:00 PM</option>
+                    <option value="7">6:00 PM</option>
+                    <option value="7">7:00 PM</option>
+                    <option value="7">8:00 PM</option>
+                    <option value="7">9:00 PM</option>
+                    <option value="7">10:00 PM</option>
+                    <option value="7">11:00 PM</option>
+                    <option value="7">12:00 AM</option>
+                </select> </div>
+            <div class="col-sm-6"> <select class="browser-default custom-select mb-4" id="select">
+                    <option value="" disabled="" selected="">End Time</option>
+                    <option value="1">6:00 AM</option>
+                    <option value="2">7:00 AM</option>
+                    <option value="3">8:00 AM</option>
+                    <option value="4">9:00 AM</option>
+                    <option value="5">10:00 AM</option>
+                    <option value="6">11:00 AM</option>
+                    <option value="7">12:00 PM</option>
+                    <option value="7">6:00 PM</option>
+                    <option value="7">7:00 PM</option>
+                    <option value="7">8:00 PM</option>
+                    <option value="7">9:00 PM</option>
+                    <option value="7">10:00 PM</option>
+                    <option value="7">11:00 PM</option>
+                    <option value="7">12:00 AM</option>
+                </select> </div>
+        </div>
+        <!--Fifth Row-->
+        <div class="row">
+            <div class="col-sm-4"> <select class="browser-default custom-select mb-4" id="select">
+                    <option value="" disabled="" selected="">Kids(0-14)</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    
+                </select> </div>
+            <div class="col-sm-4"> <select class="browser-default custom-select mb-4" id="select">
+                    <option value="" disabled="" selected="">Adults(15-64)</option>
+                    <option value="1">15-20</option>
+                    <option value="2">21-25</option>
+                    <option value="3">26-30</option>
+                    <option value="3">31-35</option>
+                    <option value="3">36-40</option>
+                    <option value="3">41-45</option>
+                    <option value="3">46-50</option>
+                    <option value="3">51-55</option>
+                    <option value="3">56-60</option>
+                    <option value="3">61-64</option>
+                </select> </div>
+            <div class="col-sm-4"> <select class="browser-default custom-select mb-4" id="select">
+                    <option value="" disabled="" selected="">Seniors(65+)</option>
+                    <option value="1">65-80</option>
+                    <option value="2">81-90</option>
+                    <option value="3">91-100</option>
+                </select> </div>
+        </div> <div><a href="#" class="btn btn-primary float-right mt-5">Find Buses</a></div>
+      <div> <a href="#" class="btn btn-primary float-right mt-5 mr-5">Find Trains</a></div>
+       <a href="#" class="btn btn-primary float-right mt-5 mr-5">Find Flights</a>
+       <b href="#" class="btn btn-primary float-right mt-5 mr-5">Find Cabs</b>
+       
+    </div>
+</div>
