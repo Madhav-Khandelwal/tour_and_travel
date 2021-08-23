@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserpageComponent } from './userpage/userpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { PackageComponent } from './package/package.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     UserpageComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    PackageComponent
   ],
   imports: [
     BrowserModule,
