@@ -14,6 +14,8 @@ export class RegisterUserComponent{
 
   userModel=new User("","","","","");
   userLogin=new Userlogin("","");
+  msg="";
+
   constructor(private _userService: UserserviceService,private router:Router,private activatedRoute:ActivatedRoute){}
   
   addUser(){
@@ -21,6 +23,7 @@ export class RegisterUserComponent{
     .subscribe(
       data=> {
         console.log("success ",data);
+        this.userModel=new User("","","","","");
     },
       error=> console.log("message",error)
     )
@@ -32,10 +35,7 @@ export class RegisterUserComponent{
     this._userService.login(this.userLogin)
     .subscribe(
       data=> {
-        if(data==true)
           this.router.navigate(['userpage']);
-        else
-          console.log("Please enter correct email/password");
     },
     err=>{console.log("error got",err);
     }
