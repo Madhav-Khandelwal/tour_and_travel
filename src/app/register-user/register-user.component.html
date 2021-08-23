@@ -7,7 +7,7 @@
         <mat-card-content>
           <!-- {{userForm.value | json}} -->
           <form #userForm="ngForm" (ngSubmit)="loginUser()">
-            <small [class.text-danger]="msg.status==500">{{msg.message}}</small>
+            <small class="text-center" [class.text-danger]="login_msg.status==500">{{login_msg.message}}</small>
             <mat-form-field>
               <input matInput placeholder="Email" name="email" [(ngModel)]="userLogin.email" required>
               <mat-error *ngIf="email.invalid">Email is required</mat-error>
@@ -35,7 +35,7 @@
         <mat-card-content>
           <!-- {{userModel | json}} -->
           <form #userForm="ngForm" (ngSubmit)="addUser()">
-            <small [class.text-danger]="msg.status==500">{{msg.message}}</small>
+            <small [class.text-danger]="register_msg.status==500">{{register_msg.message}}</small>
             <mat-form-field>
               <input matInput placeholder="First Name" required name="firstname" [(ngModel)]="userModel.firstName"
                 #firstname="ngModel">
@@ -55,7 +55,7 @@
 
 
             <mat-form-field>
-              <input matInput placeholder="Phone" required name="phone_no" [(ngModel)]="userModel.phoneno"
+              <input matInput placeholder="Phone" required name="phone_no" minlength="10" maxlength="10" [(ngModel)]="userModel.phoneno"
                 #phone_no="ngModel">
               <mat-icon matSuffix>phone</mat-icon>
               <mat-error *ngIf="phone_no.invalid">

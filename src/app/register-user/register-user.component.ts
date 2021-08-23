@@ -14,7 +14,8 @@ export class RegisterUserComponent {
 
   userModel = new User();
   userLogin = new Userlogin();
-  msg: any = "";
+  login_msg: any = "";
+  register_msg:any="";
   loggedIn=false;
 
   constructor(private _userService: UserserviceService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
@@ -27,7 +28,7 @@ export class RegisterUserComponent {
           this._router.navigate(['login']);
         },
         err => {
-          this.msg = err.error;
+          this.register_msg = err.error;
         }
       )
   }
@@ -38,15 +39,13 @@ export class RegisterUserComponent {
       .subscribe(
         data => {
           localStorage.setItem('currentUser', JSON.stringify(data))
-          this._router.navigate(['userpage']);
+          this._router.navigate(['home']);
         },
         err => {
-          this.msg = err.error;
+          this.login_msg = err.error;
         }
       )
   }
-  logout(){
-    localStorage.removeItem('currentUser');
-  }
+  
 
 }

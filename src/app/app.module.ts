@@ -17,13 +17,17 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserpageComponent } from './userpage/userpage.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterUserComponent,
     HomeComponent,
-    UserpageComponent
+    UserpageComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
