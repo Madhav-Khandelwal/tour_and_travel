@@ -10,36 +10,39 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './register-user.component.html',
   styleUrls: ['./register-user.component.css']
 })
-export class RegisterUserComponent{
+export class RegisterUserComponent {
 
-  userModel=new User("","","","","");
-  userLogin=new Userlogin("","");
-  msg="";
+  userModel = new User();
+  userLogin = new Userlogin("", "");
+  msg: any = "";
 
-  constructor(private _userService: UserserviceService,private router:Router,private activatedRoute:ActivatedRoute){}
-  
-  addUser(){
+  constructor(private _userService: UserserviceService, private router: Router, private activatedRoute: ActivatedRoute) { }
+
+  addUser() {
     this._userService.register(this.userModel)
-    .subscribe(
-      data=> {
-        console.log("success ",data);
-        this.userModel=new User("","","","","");
-    },
-      error=> console.log("message",error)
-    )
+      .subscribe(
+        data => {
+          console.log("success ", data);
+          this.router.navigate(['login']);
+         
+        },
+        err => {
+          this.msg = err.error;
+        }
+      )
   }
 
-  loginUser(){
-    
-    console.log(this.userLogin);
+  loginUser() {
+
     this._userService.login(this.userLogin)
-    .subscribe(
-      data=> {
+      .subscribe(
+        data => {
           this.router.navigate(['userpage']);
-    },
-    err=>{console.log("error got",err);
-    }
-    )
+        },
+        err => {
+          this.msg = err.error;
+        }
+      )
   }
 
 }
