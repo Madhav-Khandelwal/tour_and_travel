@@ -16,6 +16,16 @@
         margin-left: 350px;
         margin-top: 150px;
     }
+    .form-group
+    {
+        color:#FFF;
+        font-weight: bold;
+    }
+    .col-md-12
+    {
+      text-align: center;
+      font-size: 48px;
+    }
     .glass {
         width: 60rem;
         height: 40rem;
@@ -39,4 +49,8 @@
         box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
         filter: blur(10px);
         margin: -20px;
+      }
+      .clrs
+      {
+        background-color:crimson;
       }

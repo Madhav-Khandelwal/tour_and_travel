@@ -37,6 +37,6 @@ import { ContactComponent } from './contact/contact.component';
     MatIconModule
   ],
   providers: [],
-  bootstrap: [FeedbackComponent]
+  bootstrap: [ContactComponent]
 })
 export class AppModule { }
