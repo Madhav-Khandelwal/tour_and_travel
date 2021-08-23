@@ -13,18 +13,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RegisterUserComponent {
 
   userModel = new User();
-  userLogin = new Userlogin("", "");
+  userLogin = new Userlogin();
   msg: any = "";
+  loggedIn=false;
 
-  constructor(private _userService: UserserviceService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private _userService: UserserviceService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
 
   addUser() {
     this._userService.register(this.userModel)
       .subscribe(
         data => {
           console.log("success ", data);
-          this.router.navigate(['login']);
-         
+          this._router.navigate(['login']);
         },
         err => {
           this.msg = err.error;
@@ -37,12 +37,16 @@ export class RegisterUserComponent {
     this._userService.login(this.userLogin)
       .subscribe(
         data => {
-          this.router.navigate(['userpage']);
+          localStorage.setItem('currentUser', JSON.stringify(data))
+          this._router.navigate(['userpage']);
         },
         err => {
           this.msg = err.error;
         }
       )
+  }
+  logout(){
+    localStorage.removeItem('currentUser');
   }
 
 }

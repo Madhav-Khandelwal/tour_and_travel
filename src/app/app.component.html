@@ -27,8 +27,11 @@
                     <a class="nav-link" href="#">Package</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0" *ngIf="isActive()==false">
                 <a class="btn btn-outline-success my-2 my-sm-0" routerLink="login" >Login</a>
+            </form>
+            <form class="form-inline my-2 my-lg-0" (click)="logout()" *ngIf="isActive()==true">
+                <a class="btn btn-outline-success my-2 my-sm-0" routerLink="login" >Logout</a>
             </form>
         </div>
     </nav>

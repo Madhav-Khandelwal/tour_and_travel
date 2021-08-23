@@ -15,6 +15,7 @@ export class UserserviceService {
     return this._http.post<any>(`${this._url}/save`,user);
   }
   login(userlogin: Userlogin){
-    return this._http.post<any>(`${this._url}/login`,userlogin);
+    return this._http.post<any>(`${this._url}/login`,userlogin)
+    
   }
 }
