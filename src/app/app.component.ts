@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,15 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Tour-and-Travel';
+  isAdmin=false;
+  currentUser:any=null;
   constructor(private _router: Router) { }
   isActive() {
-    if (localStorage.getItem('currentUser')) {
-      // logged in so return true
+    const user=localStorage.getItem('currentUser');
+    if (user) {
+      this.currentUser= user !== null ? JSON.parse(user) : new User();
+      if(this.currentUser.email=="my@gmail.com")
+        this.isAdmin=true;
       return true;
     }
     return false;
@@ -19,5 +25,6 @@ export class AppComponent {
 
   logout(){
     localStorage.removeItem('currentUser');
+    this.isAdmin=false;
   }
 }
