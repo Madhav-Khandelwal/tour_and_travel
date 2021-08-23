@@ -1,0 +1,35 @@
+<!-- <app-register-user></app-register-user> -->
+<!-- <app-home></app-home> -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Flight</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Train</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Package</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a class="btn btn-outline-success my-2 my-sm-0" routerLink="login" >Login</a>
+            </form>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
