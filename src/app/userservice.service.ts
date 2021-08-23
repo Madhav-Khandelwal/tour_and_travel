@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import{User} from './user';
 import { Userlogin } from './userlogin';
 import { Contactus } from './contactus';
+import { Transport } from './transport';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +23,10 @@ export class UserserviceService {
   }
   saveContactUs(contactus: Contactus){
     return this._http.post<any>(`${this._url}/contactus`,contactus);
+    
+  }
+  getTransport(transport: Transport):Observable<Transport[]>{
+    return this._http.get<Transport[]>(`${this._url}/get_transport?source=${transport.source}&destination=${transport.destination}&type=${transport.type}`);
     
   }
 }

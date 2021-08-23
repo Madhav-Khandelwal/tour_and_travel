@@ -20,6 +20,7 @@ import { UserpageComponent } from './userpage/userpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { PackageComponent } from './package/package.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PackageComponent } from './package/package.component';
     UserpageComponent,
     ContactComponent,
     FooterComponent,
-    PackageComponent
+    PackageComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

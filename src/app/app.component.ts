@@ -26,5 +26,6 @@ export class AppComponent {
   logout(){
     localStorage.removeItem('currentUser');
     this.isAdmin=false;
+    this._router.navigate(['home']);
   }
 }
