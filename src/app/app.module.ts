@@ -21,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { PackageComponent } from './package/package.component';
 import { BookingComponent } from './booking/booking.component';
+import { BookingPageComponent } from './booking-page/booking-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BookingComponent } from './booking/booking.component';
     ContactComponent,
     FooterComponent,
     PackageComponent,
-    BookingComponent
+    BookingComponent,
+    BookingPageComponent
   ],
   imports: [
     BrowserModule,
