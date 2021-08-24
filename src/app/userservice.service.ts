@@ -5,6 +5,7 @@ import { Userlogin } from './userlogin';
 import { Contactus } from './contactus';
 import { Transport } from './transport';
 import { Observable } from 'rxjs';
+import { BookingDetail } from './booking-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,9 @@ export class UserserviceService {
   }
   getTransport(transport: Transport):Observable<Transport[]>{
     return this._http.get<Transport[]>(`${this._url}/get_transport?source=${transport.source}&destination=${transport.destination}&type=${transport.type}`);
+    
+  }saveBooking(booking: BookingDetail){
+    return this._http.post<any>(`${this._url}/save_booking`,booking);
     
   }
 }
