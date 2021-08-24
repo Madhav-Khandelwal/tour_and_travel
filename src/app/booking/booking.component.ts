@@ -11,9 +11,11 @@ export class BookingComponent {
 
   transportModel=new Transport();
   transportData: Transport[]=[];
+  searchDate:string="";
   constructor(private _userService: UserserviceService) { }
 
   onSearch(){
+
     this._userService.getTransport(this.transportModel)
       .subscribe(
         data => {
