@@ -1,8 +1,8 @@
 export class Transport {
     source:string="";
     destination:string="";
-    arrival:number=0;
-    departure:number=0;
+    arrival:string="";
+    departure:string="";
     type:number=0;
     constructor(){}
 }
