@@ -7,25 +7,25 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="i1">Firstname</label>
-                        <input type="email" class="form-control" name="firstName" [(ngModel)]="bookingModel.firstName" id="i1" placeholder="Firstname">
+                        <input type="text" class="form-control" name="firstName" [(ngModel)]="bookingModel.firstName" id="i1" placeholder="Firstname">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="i2">Lastname</label>
-                        <input type="password" class="form-control" name="lastName" [(ngModel)]="bookingModel.lastName" id="i2" placeholder="Lastname">
+                        <input type="text" class="form-control" name="lastName" [(ngModel)]="bookingModel.lastName" id="i2" placeholder="Lastname">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="age">Age</label>
-                    <input type="number" class="form-control" name="age" [(ngModel)]="bookingModel.age" id="age" placeholder="Age">
+                    <input type="text" class="form-control" name="age" [(ngModel)]="bookingModel.age" id="age" placeholder="Age">
                 </div>
                 <div class="form-group">
                     <label for="inputAddress2">Gender</label>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio" [(ngModel)]="bookingModel.gender" class="custom-control-input">
+                        <input type="radio" id="gender" name="gender" value="male" [(ngModel)]="bookingModel.gender" class="custom-control-input">
                         <label class="custom-control-label" for="customRadio1" >Male</label>
                       </div>
                       <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" [(ngModel)]="bookingModel.gender" class="custom-control-input">
+                        <input type="radio" id="gender" name="gender" value="female" [(ngModel)]="bookingModel.gender" class="custom-control-input">
                         <label class="custom-control-label" for="customRadio2" >Female</label>
                       </div>
                 </div>
