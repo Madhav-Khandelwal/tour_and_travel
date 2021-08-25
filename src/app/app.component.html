@@ -15,24 +15,28 @@
                     <a class="nav-link" routerLink="home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Bus</a>
+                    <a class="nav-link" routerLink="book">Bus</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Flight</a>
+                    <a class="nav-link" routerLink="book">Flight</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Train</a>
+                    <a class="nav-link" routerLink="book">Train</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Package</a>
-                </li><li class="nav-item">
+                </li>
+                <!-- <li class="nav-item">
                     <a class="nav-link" routerLink="book">Book</a>
+                </li> -->
+                <li class="nav-item" *ngIf="isActive()==true">
+                    <a class="nav-link" [routerLink]="['history',currentUser.user_id]">Bookings</a>
                 </li>
                 <li class="nav-item" *ngIf="isActive()==true">
-                    <a class="nav-link" [routerLink]="['history',currentUser.user_id]">View</a>
+                    <a class="nav-link" [routerLink]="['feedback',currentUser.user_id]">Feedback</a>
                 </li>
                 <li class="nav-item" *ngIf="isActive()==true && isAdmin==true">
-                    <a class="nav-link" href="#">More</a>
+                    <a class="nav-link" href="#">View</a>
                 </li>
             </ul>
             <span class="navbar-text mr-4" *ngIf="isActive()==true">

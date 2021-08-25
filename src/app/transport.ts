@@ -1,10 +1,10 @@
 export class Transport {
-    transportId:any=null;
-    source:string="";
-    destination:string="";
-    arrival:string="";
-    departure:string="";
-    type:number=0;
-    fare:number=0;
-    constructor(){}
+    transportId:any;
+    source:string;
+    destination:string;
+    arrival:string;
+    departure:string;
+    type:number;
+    fare:number;
+    
 }

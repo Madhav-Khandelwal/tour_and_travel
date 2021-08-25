@@ -77,15 +77,20 @@
     <hr>
     <div class="row text-center">
       <div class="col-md-6">
-        <p class="lead">Fare {{history.transport.fare}}</p>
+        <p class="lead">Total Fare: {{history.transport.fare}}</p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="history.status==1; else refundTag">
 
         <form (ngSubmit)="cancelTicket(history.bookingId)">
           <button type="submit" class="btn btn-danger">Cancel</button>
         </form>
 
       </div>
+      <ng-template #refundTag>
+        <div class="col-md-6">
+          <p class="lead">Refund Fare: {{history.transport.fare-120}}</p>
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>

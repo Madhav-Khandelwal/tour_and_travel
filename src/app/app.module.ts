@@ -23,6 +23,7 @@ import { PackageComponent } from './package/package.component';
 import { BookingComponent } from './booking/booking.component';
 import { BookingPageComponent } from './booking-page/booking-page.component';
 import { HistoryComponent } from './history/history.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HistoryComponent } from './history/history.component';
     PackageComponent,
     BookingComponent,
     BookingPageComponent,
-    HistoryComponent
+    HistoryComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

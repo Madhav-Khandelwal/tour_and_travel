@@ -1,12 +1,12 @@
 export class BookingDetail {
-    firstName:string="";
-    lastName:string="";
-    gender:string="";
-    age:number=0;
-    paymentDate="";
-    paymentTime="";
-    userId:number=0;
-    transportId:number=0;
-    journeyDate:string="";
+    firstName:string;
+    lastName:string;
+    gender:string;
+    age:number;
+    paymentDate;
+    paymentTime;
+    userId:number;
+    transportId:number;
+    journeyDate:string;
     constructor(){}
 }
