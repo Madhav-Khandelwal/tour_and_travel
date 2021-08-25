@@ -25,7 +25,7 @@ export class RegisterUserComponent {
       .subscribe(
         data => {
           console.log("success ", data);
-          this._router.navigate(['login']);
+          this._router.navigate(['home']);
         },
         err => {
           this.register_msg = err.error;

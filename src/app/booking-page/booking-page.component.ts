@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BookingDetail } from '../booking-detail';
 import { UserserviceService } from '../userservice.service';
+import {formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-booking-page',
@@ -11,19 +12,19 @@ import { UserserviceService } from '../userservice.service';
 export class BookingPageComponent implements OnInit{
 
   bookingModel=new BookingDetail();
-  constructor(private _router:ActivatedRoute,private _userService:UserserviceService) { }
+  constructor(private _router:Router,private _routerparam:ActivatedRoute,private _userService:UserserviceService) { }
   id:any;
   journeyDate:any;
   user:any;
   ngOnInit(){
-    let param1=this._router.snapshot.paramMap.get('id');
-    this.journeyDate=this._router.snapshot.paramMap.get('date');
+    let param1=this._routerparam.snapshot.paramMap.get('id');
+    this.journeyDate=this._routerparam.snapshot.paramMap.get('date');
     this.id= param1!=null?parseInt(param1):null;
     
   }
   onSubmit(){
-    this.bookingModel.paymentDate=new Date();
-    this.bookingModel.paymentTime=Date.now();
+    this.bookingModel.paymentDate=formatDate(new Date(), 'dd-MM-yyyy','en-US', '+0530');
+    this.bookingModel.paymentTime=formatDate(new Date(), 'hh:mm:ss','en-US', '+0530');
 
     let local=localStorage.getItem('currentUser');
     this.user=local!=null?JSON.parse(local):null;
@@ -35,6 +36,7 @@ export class BookingPageComponent implements OnInit{
       .subscribe(
         data => {
           console.log("success ", data);
+          this._router.navigate(['history',this.user.user_id]);
         //  this.contact_msg= "Detail submitted successfully";
         },
         err => {
