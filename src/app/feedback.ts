@@ -1,9 +1,7 @@
 export class Feedback {
     experience:number=0;
-    satisfaction:number=0;
+    satisfy:number=0;
     recommend:number=0;
     message:string;
-    user:{
-        userId:number
-    }
+    userId:number=0; 
 }

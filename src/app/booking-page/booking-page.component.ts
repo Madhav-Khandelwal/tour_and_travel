@@ -12,13 +12,13 @@ import {formatDate } from '@angular/common';
 export class BookingPageComponent implements OnInit{
 
   bookingModel=new BookingDetail();
-  constructor(private _router:Router,private _routerparam:ActivatedRoute,private _userService:UserserviceService) { }
+  constructor(private _router:Router,private _activateRouter:ActivatedRoute,private _userService:UserserviceService) { }
   id:any;
   journeyDate:any;
   user:any;
   ngOnInit(){
-    let param1=this._routerparam.snapshot.paramMap.get('id');
-    this.journeyDate=this._routerparam.snapshot.paramMap.get('date');
+    let param1=this._activateRouter.snapshot.paramMap.get('id');
+    this.journeyDate=this._activateRouter.snapshot.paramMap.get('date');
     this.id= param1!=null?parseInt(param1):null;
     
   }

@@ -16,7 +16,7 @@ export class UserserviceService {
   _url="http://localhost:8090/user";
   constructor(private _http:HttpClient) { }
 
-  getUserId():number{
+  getUserId(){
     const user=localStorage.getItem('currentUser');
     if (user) {
       let currentUser= user !== null ? JSON.parse(user) : new User();
@@ -40,8 +40,8 @@ export class UserserviceService {
     return this._http.get<Transport[]>(`${this._url}/get_transport?source=${transport.source}&destination=${transport.destination}&type=${transport.type}`);
   }
 
-  getHistory(id:number):Observable<any[]>{
-    return this._http.get<any[]>(`${this._url}/get_history?id=${id}`);
+  getHistory(user_id:number):Observable<any[]>{
+    return this._http.get<any[]>(`${this._url}/get_history?user_id=${user_id}`);
   }
   
   saveBooking(booking: BookingDetail){
@@ -52,7 +52,7 @@ export class UserserviceService {
     return this._http.get<any[]>(`${this._url}/cancel_booking?booking_id=${booking_id}`);
   }
 
-  saveFeedback(feedback: Feedback):Observable<Feedback>{
+  saveFeedback(feedback:any):Observable<Feedback>{
     return this._http.post<any>(`${this._url}/save_feedback`,feedback);
   }
 }
