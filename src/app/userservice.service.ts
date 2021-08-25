@@ -37,4 +37,8 @@ export class UserserviceService {
   saveBooking(booking: BookingDetail){
     return this._http.post<any>(`${this._url}/save_booking`,booking);
   }
+
+  cancelBooking(id:number):Observable<any[]>{
+    return this._http.get<any[]>(`${this._url}/cancel_booking?id=${id}`);
+  }
 }

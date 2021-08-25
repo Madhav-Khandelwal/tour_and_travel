@@ -24,23 +24,17 @@ export class HistoryComponent implements OnInit {
         data => {
           this.historyData=data;
           console.log("success ",this.historyData);
-         // this._router.navigate(['login']);
-        },
-        err => {
-         // this.register_msg = err.error;
+        
         }
       )
   }
-  cancelTicket(){
-    this._userService.getHistory(this.id)
+  cancelTicket(bid:number){
+    this._userService.cancelBooking(bid)
       .subscribe(
         data => {
           this.historyData=data;
           console.log("success ",this.historyData);
          // this._router.navigate(['login']);
-        },
-        err => {
-         // this.register_msg = err.error;
         }
       )
   }
