@@ -5,5 +5,6 @@ export class Transport {
     arrival:string="";
     departure:string="";
     type:number=0;
+    fare:number=0;
     constructor(){}
 }

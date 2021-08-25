@@ -28,8 +28,8 @@ export class HistoryComponent implements OnInit {
         }
       )
   }
-  cancelTicket(bid:number){
-    this._userService.cancelBooking(bid)
+  cancelTicket(booking_id:number){
+    this._userService.cancelBooking(booking_id)
       .subscribe(
         data => {
           this.historyData=data;
