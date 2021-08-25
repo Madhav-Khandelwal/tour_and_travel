@@ -28,6 +28,9 @@
                 </li><li class="nav-item">
                     <a class="nav-link" routerLink="book">Book</a>
                 </li>
+                <li class="nav-item" *ngIf="isActive()==true">
+                    <a class="nav-link" [routerLink]="['history',currentUser.user_id]">View</a>
+                </li>
                 <li class="nav-item" *ngIf="isActive()==true && isAdmin==true">
                     <a class="nav-link" href="#">More</a>
                 </li>

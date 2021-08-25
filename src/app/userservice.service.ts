@@ -28,9 +28,13 @@ export class UserserviceService {
   }
   getTransport(transport: Transport):Observable<Transport[]>{
     return this._http.get<Transport[]>(`${this._url}/get_transport?source=${transport.source}&destination=${transport.destination}&type=${transport.type}`);
-    
-  }saveBooking(booking: BookingDetail){
+  }
+
+  getHistory(id:number):Observable<any[]>{
+    return this._http.get<any[]>(`${this._url}/get_history?id=${id}`);
+  }
+  
+  saveBooking(booking: BookingDetail){
     return this._http.post<any>(`${this._url}/save_booking`,booking);
-    
   }
 }
